@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+{% firstof user.get_full_name user.username %}
+{% endblock %}
+
+
+{% block content %}
+    {% include 'core/messages.html' %}
+    {% include 'core/property_list.html' %}
+{% endblock %}
